@@ -5,6 +5,7 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float moveSpeed;
     void Start()
     {
         
@@ -13,6 +14,10 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 moveInput=new Vector3(0f,0f,0f);
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
+        moveInput.Normalize();
+        transform.position += moveInput*moveSpeed*Time.deltaTime;
     }
 }
