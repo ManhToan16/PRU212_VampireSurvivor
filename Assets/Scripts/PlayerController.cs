@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public float moveSpeed;
+    public Animator anim;
     void Start()
     {
         
@@ -19,5 +20,14 @@ public class PlayerController : MonoBehaviour
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
         transform.position += moveInput*moveSpeed*Time.deltaTime;
+        if (moveInput != Vector3.zero)
+        {
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
+
+        }
     }
 }
