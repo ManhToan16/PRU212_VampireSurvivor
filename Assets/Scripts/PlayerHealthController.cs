@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealthController : MonoBehaviour
 {
@@ -11,18 +12,23 @@ public class PlayerHealthController : MonoBehaviour
     {
         instance = this;
     }
+    public Slider healthSlider;
     void Start()
     {
         currentHealth=maxHealth;
+        healthSlider.maxValue=maxHealth;
+        healthSlider.value=currentHealth;
+
     }
+  
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDame(10f);
-        } 
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    TakeDame(10f);
+        //} 
     }
     public void TakeDame(float dameToTake)
     {
@@ -31,6 +37,8 @@ public class PlayerHealthController : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        healthSlider.value = currentHealth;
+
     }
-  
+
 }
