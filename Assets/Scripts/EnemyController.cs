@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour
     public float hitWaitTime = 1f;
     private float hitCounter;
     public float health = 5f;
+    public float knockBackTime = .5f;
+    private float knockBackCounter;
     void Start()
     {
         target = PlayerHealthController.instance.transform;
@@ -21,6 +23,18 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (knockBackCounter > 0)
+        {
+            knockBackCounter-=Time.deltaTime;
+            if (moveSpeed > 0)
+            {
+                moveSpeed = -moveSpeed * 3f;
+            }
+            if (knockBackCounter <= 0)
+            {
+                moveSpeed=Mathf.Abs(moveSpeed* .5f);
+            }
+        }
         theRB.velocity = (target.position-transform.position).normalized*moveSpeed;
         if (hitCounter > 0f)
         {
@@ -42,5 +56,14 @@ public class EnemyController : MonoBehaviour
         if (health <= 0) {
             Destroy(gameObject);
         }
+    }
+    public void TakeDamage(float damageToTake,bool shouldKnockBack)
+    {
+        TakeDamage(damageToTake);
+        if (shouldKnockBack == true)
+        {
+            knockBackCounter = knockBackTime;
+        }
+        
     }
 }

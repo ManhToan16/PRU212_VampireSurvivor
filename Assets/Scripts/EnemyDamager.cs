@@ -8,6 +8,7 @@ public class EnemyDamager : MonoBehaviour
     public float damageAmout;
     public float lifeTime, growSpeed=5f;
     private Vector3 targetSize;
+    public bool shouldKnockBack;
     void Start()
     {
         //Destroy(gameObject,lifeTime);
@@ -33,7 +34,7 @@ public class EnemyDamager : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            collision.GetComponent<EnemyController>().TakeDamage(damageAmout);
+            collision.GetComponent<EnemyController>().TakeDamage(damageAmout,shouldKnockBack);
         }
     }
 }
