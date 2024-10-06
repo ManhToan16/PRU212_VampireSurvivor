@@ -6,15 +6,28 @@ public class EnemyDamager : MonoBehaviour
 {
     // Start is called before the first frame update
     public float damageAmout;
+    public float lifeTime, growSpeed=5f;
+    private Vector3 targetSize;
     void Start()
     {
-        
+        //Destroy(gameObject,lifeTime);
+        targetSize= transform.localScale;
+        transform.localScale=Vector3.zero;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.localScale = Vector3.MoveTowards(transform.localScale,targetSize,growSpeed*Time.deltaTime)  ;
+        lifeTime-= Time.deltaTime ;
+        if(lifeTime <= 0)
+        {
+            targetSize=Vector3.zero ;
+            if (transform.localScale.x == 0f)
+            {
+                Destroy(gameObject) ;
+            }
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
