@@ -8,6 +8,7 @@ public class DamageNumber : MonoBehaviour
     public TMP_Text damageText;
     public float lifeTime;
     private float lifeCounter;
+    public float speed = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +23,12 @@ public class DamageNumber : MonoBehaviour
         lifeCounter -= Time.deltaTime;
             if (lifeCounter <= 0)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                DamageNumberController.instance.PlaceInPool(this);  
             }
         }
-        //if (Input.GetKeyDown(KeyCode.U))
-        //{
-        //    Setup(45);
-        //}
+        transform.position += Vector3.up * speed * Time.deltaTime;
+       
     }
     public void Setup(int damageDisplay)
     {

@@ -12,6 +12,7 @@ public class DamageNumberController : MonoBehaviour
     }
     public DamageNumber numberToSpawn;
     public Transform numberCanvas;
+    private List<DamageNumber> numperPool = new List<DamageNumber>();
     void Start()
     {
         
@@ -27,8 +28,29 @@ public class DamageNumberController : MonoBehaviour
     public void SpawnDamage(float damageAmount,Vector3 location)
     {
         int rounded=Mathf.RoundToInt(damageAmount);
-        DamageNumber newDamage = Instantiate(numberToSpawn, location, Quaternion.identity, numberCanvas);
+        //DamageNumber newDamage = Instantiate(numberToSpawn, location, Quaternion.identity, numberCanvas);
+        DamageNumber newDamage = GetFormPool();
         newDamage.Setup(rounded);
         newDamage.gameObject.SetActive(true);
+        newDamage.transform.position = location;
+    }
+    public DamageNumber GetFormPool()
+    {
+        DamageNumber numberToOutput = null;
+        if (numperPool.Count == 0)
+        {
+            numberToOutput = Instantiate(numberToSpawn, numberCanvas);
+        }
+        else
+        {
+            numberToOutput = numperPool[0];
+            numperPool.RemoveAt(0);
+        }
+        return numberToOutput;
+    }
+    public void PlaceInPool(DamageNumber numberToPlace)
+    {
+        numberToPlace.gameObject.SetActive(true);
+        numperPool.Add(numberToPlace);
     }
 }
