@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     public float moveSpeed;
     public Animator anim;
+    public float pickupRange=1.5f;
     void Start()
     {
         
