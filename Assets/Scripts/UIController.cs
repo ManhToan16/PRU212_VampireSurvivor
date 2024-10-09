@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
     }
     public Slider explvlSlider;
     public TMP_Text explvlText;
+    public LevelUpSelectionButton[] levelUpButtons;
     void Start()
     {
         

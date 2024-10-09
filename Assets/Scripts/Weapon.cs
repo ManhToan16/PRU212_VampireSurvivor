@@ -8,7 +8,8 @@ public class Weapon : MonoBehaviour
     public List<WeaponStats> stats;
     public int weaponLevel;
     [HideInInspector]
-    public bool statsUpdated    ;
+    public bool statsUpdated;
+    public Sprite icon;
  public void LevelUp()
     {
         if (weaponLevel < stats.Count - 1)
@@ -23,4 +24,5 @@ public class Weapon : MonoBehaviour
 public class WeaponStats
 {
     public float speed, damage, range, timeBetweenAttacks, amount, duration;
+    public string upgradeText;
 }
