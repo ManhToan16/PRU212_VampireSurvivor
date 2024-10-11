@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6584952001462095338}
   - component: {fileID: 2052242730476311783}
   - component: {fileID: 1645546818103704881}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6098523336828081064}
   - component: {fileID: 8749464627416592402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy- Blue Wolf
   m_TagString: Enemy
   m_Icon: {fileID: 0}

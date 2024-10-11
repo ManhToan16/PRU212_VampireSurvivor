@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7152259407932787591}
   - component: {fileID: 5150374581641905491}
   - component: {fileID: 732413431571457875}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6634593130155771134}
   - component: {fileID: 5968788437595748938}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy- Blue Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}

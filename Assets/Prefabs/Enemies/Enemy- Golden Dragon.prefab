@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8965740125704491448}
   - component: {fileID: 5055209885634780921}
   - component: {fileID: 7174657524936524826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2569710632110143644}
   - component: {fileID: 2374142467648624935}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy- Golden Dragon
   m_TagString: Enemy
   m_Icon: {fileID: 0}

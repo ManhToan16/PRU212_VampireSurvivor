@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3377757919636634806}
   - component: {fileID: 4509182798324234574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy- Death Phantom
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 6166484338622385736}
   - component: {fileID: 2682474591349677263}
   - component: {fileID: 8878415103183953119}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Enemy
   m_Icon: {fileID: 0}
