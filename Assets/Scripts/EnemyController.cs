@@ -24,6 +24,10 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerController.instance.gameObject.activeSelf == true)
+        {
+
+       
         if (knockBackCounter > 0)
         {
             knockBackCounter-=Time.deltaTime;
@@ -40,6 +44,11 @@ public class EnemyController : MonoBehaviour
         if (hitCounter > 0f)
         {
             hitCounter -= Time.deltaTime;
+        }
+        }
+        else
+        {
+            theRB.velocity=Vector2.zero;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
