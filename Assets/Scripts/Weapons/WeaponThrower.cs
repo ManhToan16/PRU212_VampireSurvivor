@@ -20,7 +20,7 @@ public class WeaponThrower : Weapon
             statsUpdated = false;
             SetStats();
         }
-        throwCounter -=Time.deltaTime;
+        throwCounter  -=Time.deltaTime;
         if (throwCounter <= 0)
         {
             throwCounter = stats[weaponLevel].timeBetweenAttacks;
