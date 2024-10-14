@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour
     public LevelUpSelectionButton[] levelUpButtons;
     public GameObject levelUpPanel;
     public TMP_Text coinText;
+    public PlayerStatUpgradeDisplay moveSpeedUpgradeDisplay, healthUpgradeDisplay, pickupRangeUpgradeDisplay, maxWeaponsUpgradeDisplay;
     void Start()
     {
         

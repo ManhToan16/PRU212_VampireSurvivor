@@ -99,5 +99,6 @@ public class ExperienceLevelController : MonoBehaviour
 
             }
         }
+        PlayerStatController.instance.UpdateDisplay();
     }
 }
