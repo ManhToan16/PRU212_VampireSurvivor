@@ -13,6 +13,7 @@ public class PlayerHealthController : MonoBehaviour
         instance = this;
     }
     public Slider healthSlider;
+    public GameObject deathEffect;
     void Start()
     {
         maxHealth = PlayerStatController.instance.health[0].value;
@@ -37,6 +38,8 @@ public class PlayerHealthController : MonoBehaviour
         if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
+            LevelManager.instance.EndLevel();
+            Instantiate(deathEffect,transform.position,transform.rotation);
         }
         healthSlider.value = currentHealth;
 
