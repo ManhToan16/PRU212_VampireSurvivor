@@ -43,4 +43,24 @@ public class UIController : MonoBehaviour
     {
         coinText.text="Coin: "+CoinController.instance.currentCoins;
     }
+    public void PurchaseMoveSpeed()
+    {
+        PlayerStatController.instance.PurchaseMoveSpeed();
+        SkipLevelUp();
+    }
+    public void PurchaseHealth()
+    {
+        PlayerStatController.instance.PurchaseHealth();
+        SkipLevelUp();
+    }
+    public void PurchasePickupRange()
+    {
+        PlayerStatController.instance.PurchasePickupRange();
+        SkipLevelUp();
+    }
+    public void PurchaseMaxWeapons()
+    {
+        PlayerStatController.instance.PurchaseMaxWeapons();
+        SkipLevelUp();
+    }
 }
