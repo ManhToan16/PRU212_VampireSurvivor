@@ -43,12 +43,5 @@ public class LevelManager : MonoBehaviour
         UIController.instance.coinEndText.text = "Coin: " + CoinController.instance.currentCoins;
         UIController.instance.levelEndScreen.SetActive(true);
     }
-    public void GoToMainMenu()
-    {
-
-    }
-    public void Restart()
-    {
-
-    }
+    
 }
