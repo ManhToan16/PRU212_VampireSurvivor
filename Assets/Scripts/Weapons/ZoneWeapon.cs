@@ -24,7 +24,8 @@ public class ZoneWeapon : Weapon
         if (spawnCounter <= 0f)
         {
             spawnCounter = spawnTime;
-            Instantiate(damager,damager.transform.position, Quaternion.identity,transform).gameObject.SetActive(true); 
+            Instantiate(damager,damager.transform.position, Quaternion.identity,transform).gameObject.SetActive(true);
+            SFXManager.instance.PlaySFXPitched(10);
         }
     }
     void SetStats()
