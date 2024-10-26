@@ -15,4 +15,16 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Im Quitting");
     }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+    public void AboutUs()
+    {
+        SceneManager.LoadScene("About Us");
+    } 
+    public void Introduction()
+    {
+        SceneManager.LoadScene("Introduction");
+    }
 }
