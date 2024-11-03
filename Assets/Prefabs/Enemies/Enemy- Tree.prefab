@@ -166,11 +166,11 @@ MonoBehaviour:
   moveSpeed: 1.5
   damage: 10
   hitWaitTime: 1
-  health: 20
-  knockBackTime: 0.5
-  expToGive: 4
-  coinValue: 1
-  coinDropRate: 0.5
+  health: 40
+  knockBackTime: 0.7
+  expToGive: 10
+  coinValue: 8
+  coinDropRate: 0.78
 --- !u!114 &7664793187464338925
 MonoBehaviour:
   m_ObjectHideFlags: 0
